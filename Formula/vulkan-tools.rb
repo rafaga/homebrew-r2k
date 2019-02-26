@@ -6,6 +6,7 @@ class VulkanTools < Formula
   head "https://github.com/KhronosGroup/Vulkan-Tools.git"
 
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
   depends_on "python" => :build
 
   resource "MoltenVK" do
@@ -22,22 +23,13 @@ class VulkanTools < Formula
       "-DMOLTENVK_REPO_ROOT=#{prefix}/external/",
     ]
     mkdir "build" do
-      system "cmake", "..", *args
-      system "make"
-      system "make", "install"
+      system "cmake", "-G", "Ninja", "..", *args
+      system "ninja"
+      system "ninja", "install"
     end
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test libspirv`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
     system "false"
   end
 end

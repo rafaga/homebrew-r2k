@@ -3,10 +3,14 @@ class SpirvCross < Formula
   homepage "https://github.com/KhronosGroup/SPIRV-Cross"
   url "https://github.com/KhronosGroup/SPIRV-Cross.git", :commit => "a029d3faa12082bb4fac78351701d832716759df"
   version "2019-02-20"
+  revision 1
   head "https://github.com/KhronosGroup/SPIRV-Cross.git"
 
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
   depends_on "rafaga/r2k/spirv-headers" => :build
+  # depends_on "glm" => :test
+  # depends_on "rafaga/r2k/glslang" => :test
   conflicts_with "homebrew/core/spirv-cross"
 
   def install
@@ -30,9 +34,14 @@ class SpirvCross < Formula
 
     mkdir "build" do
       File.write(pc_file_name, pc_file)
-      system "cmake", "..", *std_cmake_args
-      system "make", "install"
+      system "cmake", "-G", "Ninja", "..", *std_cmake_args
+      system "ninja"
+      system "ninja", "install"
     end
+
+    # required for tests
+    # prefix.install "samples"
+    # (include/"spirv_cross").install Dir["include/spirv_cross/*"]
   end
 
   def pc_file; <<~EOS
@@ -50,15 +59,11 @@ class SpirvCross < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test libspirv`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
+    # cp_r Dir[prefix/"samples/cpp/*"], testpath
+    # inreplace "Makefile", "-I../../include", "-I#{include}"
+    # inreplace "Makefile", "../../spirv-cross", "spirv-cross"
+
+    # system "make"
     system "false"
   end
 end
