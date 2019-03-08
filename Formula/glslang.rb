@@ -33,7 +33,7 @@ class Glslang < Formula
   def install
     # Disabling Tests for now
     args = std_cmake_args + [
-      "-DBUILD_SHARED_LIBS=OFF",
+      "-DBUILD_SHARED_LIBS=ON",
       "-DENABLE_GLSLANG_BINARIES=ON",
     ]
 
