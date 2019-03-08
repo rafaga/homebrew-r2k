@@ -37,6 +37,13 @@ class Glslang < Formula
       "-DENABLE_GLSLANG_BINARIES=ON",
     ]
 
+    inreplace Dir["#{buildpath}/CMakeLists.txt"].each do |s|
+      s.gsub! "pkg_check_modules(SPIRV_TOOLS REQUIRED SPIRV-Tools>=2019.2.0)", \
+          "pkg_check_modules(SPIRV_TOOLS REQUIRED SPIRV-Tools>=2019.2.0)"
+      s.gsub! "pkg_check_modules(SPIRV_TOOLS_SHARED REQUIRED SPIRV-Tools>=2019.2.0)", \
+          "pkg_check_modules(SPIRV_TOOLS_SHARED REQUIRED SPIRV-Tools>=2019.2.0)"
+    end
+
     mkdir "build" do
       system "cmake", "-G", "Ninja", "..", *args
       system "ninja"
