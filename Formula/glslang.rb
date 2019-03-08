@@ -40,8 +40,8 @@ class Glslang < Formula
     inreplace Dir["#{buildpath}/CMakeLists.txt"].each do |s|
       s.gsub! "pkg_check_modules(SPIRV_TOOLS REQUIRED SPIRV-Tools>=2019.2.1)", \
           "pkg_check_modules(SPIRV_TOOLS REQUIRED SPIRV-Tools>=2019.2.0)"
-      s.gsub! "pkg_check_modules(SPIRV_TOOLS_SHARED REQUIRED SPIRV-Tools>=2019.2.1)", \
-          "pkg_check_modules(SPIRV_TOOLS_SHARED REQUIRED SPIRV-Tools>=2019.2.0)"
+      s.gsub! "pkg_check_modules(SPIRV_TOOLS_SHARED REQUIRED SPIRV-Tools-shared>=2019.2.1)", \
+          "pkg_check_modules(SPIRV_TOOLS_SHARED REQUIRED SPIRV-Tools-shared>=2019.2.0)"
     end
 
     mkdir "build" do
