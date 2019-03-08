@@ -1,9 +1,9 @@
 class SpirvTools < Formula
   desc "Provides an API and commands for processing SPIR-V modules"
   homepage "https://github.com/KhronosGroup/SPIRV-Tools"
-  url "https://github.com/KhronosGroup/SPIRV-Tools.git", :revision => "117a1fd11f11e9bef9faa563c3d5156cc6ab529c"
+  url "https://github.com/KhronosGroup/SPIRV-Tools.git", :revision => "5994ae2a045015004cce24802dc47c33736486ea"
   version "2019.1-git117a1fd11e9b"
-  revision 1
+  revision 2
   head "https://github.com/KhronosGroup/SPIRV-Tools.git"
 
   depends_on "cmake" => :build

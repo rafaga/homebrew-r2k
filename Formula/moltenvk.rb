@@ -1,9 +1,9 @@
 class Moltenvk < Formula
   desc "Implementation of the Vulkan 1.0 API, that runs on Apple's Metal API"
   homepage "https://github.com/KhronosGroup/MoltenVK"
-  url "https://github.com/KhronosGroup/MoltenVK.git", :tag => "v1.0.32"
+  url "https://github.com/KhronosGroup/MoltenVK.git", :revision => "e4f79af39c0e585a43b4a3bebcf2c3c678100b7f"
   version "1.0.32"
-  revision 1
+  revision 2
   head "https://github.com/KhronosGroup/MoltenVK.git"
 
   depends_on "cereal" => :build
