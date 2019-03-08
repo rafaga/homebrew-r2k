@@ -1,7 +1,7 @@
 class VulkanHeaders < Formula
   desc "Provides header files and the Vulkan API definition (registry)"
   homepage "https://github.com/KhronosGroup/Vulkan-Headers"
-  url "https://github.com/KhronosGroup/Vulkan-Headers.git", :commit => "c200cb25db0f47364d3318d92c1d8e9dfff2fef1"
+  url "https://github.com/KhronosGroup/Vulkan-Headers.git", :revision => "8e2c4cd554b644592a6d904f2c8000ebbd4aa77f"
   version "1.1.97"
   revision 1
   head "https://github.com/KhronosGroup/Vulkan-Headers.git"

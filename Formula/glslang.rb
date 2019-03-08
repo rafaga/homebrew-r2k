@@ -1,7 +1,7 @@
 class Glslang < Formula
   desc "OpenGL and OpenGL ES shader front end and validator"
   homepage "https://github.com/KhronosGroup/glslang"
-  url "https://github.com/KhronosGroup/glslang.git", :commit => "2898223375d57fb3974f24e1e944bb624f67cb73"
+  url "https://github.com/KhronosGroup/glslang.git", :revision => "5432f0dd8f331f15182681664d7486681e8514e6"
   version "7.11.3113"
   revision 1
   head "https://github.com/KhronosGroup/glslang.git"

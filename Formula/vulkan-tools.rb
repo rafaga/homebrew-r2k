@@ -1,7 +1,7 @@
 class VulkanTools < Formula
   desc "Tools and utilities to verify use of Vulkan API on Applications"
   homepage "https://github.com/KhronosGroup/Vulkan-Tools"
-  url "https://github.com/KhronosGroup/Vulkan-Tools.git", :commit => "ff56a741b1cce8ae20ff6276f51100e668e9c4f5"
+  url "https://github.com/KhronosGroup/Vulkan-Tools.git", :revision => "d43b22f0859f42c5fd71a530278ffa504ce95b7f"
   version "1.1.97"
   head "https://github.com/KhronosGroup/Vulkan-Tools.git"
 
