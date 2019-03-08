@@ -1,7 +1,7 @@
 class SpirvCross < Formula
   desc "Tool for parsing and converting SPIR-V to other shader language"
   homepage "https://github.com/KhronosGroup/SPIRV-Cross"
-  url "https://github.com/KhronosGroup/SPIRV-Cross.git", :commit => "a029d3faa12082bb4fac78351701d832716759df"
+  url "https://github.com/KhronosGroup/SPIRV-Cross.git", :commit => "d9ed3dcc7a7e62e5f95fd8f24e3d35e7e402ae92"
   version "2019-02-20"
   revision 1
   head "https://github.com/KhronosGroup/SPIRV-Cross.git"
