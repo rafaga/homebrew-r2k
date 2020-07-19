@@ -14,7 +14,7 @@ class Wt < Formula
   depends_on "pango" => :recomended
   depends_on "qt5" => :recomended
   depends_on "zlib"
-  depends_on "libfcgi" => :recomended
+  depends_on "fcgi" => :recomended
 
   def install
     args = std_cmake_args + [
