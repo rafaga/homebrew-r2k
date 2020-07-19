@@ -1,4 +1,4 @@
-class wt < Formula
+class Wt < Formula
   desc "Wt is a web GUI library in modern C++."
   homepage "https://www.webtoolkit.eu/wt"
   url "https://github.com/emweb/wt.git", :tag => "4.3.1"
