@@ -21,6 +21,7 @@ class Wt < Formula
       "-DWT_WRASTERIMAGE_IMPLEMENTATION=GraphicsMagick",
       "-DGM_PREFIX=#{Formula["GraphicsMagick"].opt_prefix}",
       "-DGM_INCLUDE_DIR=#{Formula["GraphicsMagick"].opt_include}",
+      "-DOPENSSL_ROOT_DIR=#{Formula["OpenSSL@1.1.1"].opt_prefix}"
     ]
 
     mkdir "build" do
