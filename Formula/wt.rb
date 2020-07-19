@@ -10,7 +10,6 @@ class Wt < Formula
   depends_on "GraphicsMagick" => :recomended
   depends_on "OpenSSL" => :recomended
   depends_on "libharu" => :recomended
-  depends_on "libunwind-headers" => :recomended
   depends_on "pango" => :recomended
   depends_on "qt5" => :recomended
   depends_on "zlib"
