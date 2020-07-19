@@ -11,9 +11,10 @@ class Wt < Formula
   depends_on "OpenSSL" => :recomended
   depends_on "libharu" => :recomended
   depends_on "pango" => :recomended
-  depends_on "qt5" => :recomended
+  depends_on "qt4" => :optional
   depends_on "zlib"
   depends_on "fcgi" => :recomended
+  depends_on "mariadb-connector-c" => :recomended
 
   def install
     args = std_cmake_args + [
