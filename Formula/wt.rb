@@ -18,7 +18,7 @@ class Wt < Formula
   def install
     args = std_cmake_args + [
       "-DWT_WRASTERIMAGE_IMPLEMENTATION=GraphicsMagick",
-      "-DGM_PREFIX=#{Formula["GraphicsMagick"].opt_include}",
+      "-DGM_PREFIX=#{Formula["GraphicsMagick"].opt_prefix}",
     ]
 
     mkdir "build" do
