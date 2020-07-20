@@ -24,7 +24,7 @@ class SpirvTools < Formula
     end
 
     mkdir "build" do
-      system "cmake". *args, ".."
+      system "cmake", *args, ".."
       system "make"
       system "make", "install"
     end
