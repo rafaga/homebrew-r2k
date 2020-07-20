@@ -1,13 +1,12 @@
 class SpirvTools < Formula
   desc "Provides an API and commands for processing SPIR-V modules"
   homepage "https://github.com/KhronosGroup/SPIRV-Tools"
-  url "https://github.com/KhronosGroup/SPIRV-Tools.git", :revision => "5994ae2a045015004cce24802dc47c33736486ea"
-  version "2019.1-git117a1fd11e9b"
-  revision 2
+  url "https://github.com/KhronosGroup/SPIRV-Tools.git", :revision => "e128ab0d624ce7beb08eb9656bb260c597a46d0a"
+  version "2020.3"
+  revision 1
   head "https://github.com/KhronosGroup/SPIRV-Tools.git"
 
   depends_on "cmake" => :build
-  depends_on "ninja" => :build
   depends_on "rafaga/r2k/spirv-headers"
 
   def install
@@ -25,9 +24,9 @@ class SpirvTools < Formula
     end
 
     mkdir "build" do
-      system "cmake", "-G", "Ninja", "..", *args
-      system "ninja"
-      system "ninja", "install"
+      system "cmake". *args, ".."
+      system "make"
+      system "make", "install"
     end
   end
 
