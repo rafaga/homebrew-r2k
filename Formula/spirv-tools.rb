@@ -14,7 +14,7 @@ class SpirvTools < Formula
     args = std_cmake_args + [
       "-DSPIRV_SKIP_TESTS=ON",
       "-DSPIRV_HEADER_DIR=#{Formula["rafaga/r2k/spirv-headers"].opt_include}",
-      "-DSPIRV_HEADER_INCLUDE_DIR #{Formula["rafaga/r2k/spirv-headers"].opt_include}"
+      "-DSPIRV_HEADER_INCLUDE_DIR=#{Formula["rafaga/r2k/spirv-headers"].opt_include}"
     ]
 
     mkdir "build" do
